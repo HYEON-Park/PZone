@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "dxb";
+	src: url("../font/dxbt.ttf");
+}
+@font-face {
+	font-family: "C";
+	src: url("../font/COI.ttf");
+}
+@font-face {
+    font-family: "ii";
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	
+	background-image: url("../img/sky.png");
+	background-size: 100%;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	/*백그라운드이미지반복없음*/
+}
+
+#mainHome {
+	background-color: white;
+	position: fixed;
+	top:0px;
+	left:0px;
+	width: 100%;
+	height: 190px;
+}
+#siteMain{
+	font-family: "C";
+	font-size: 55pt;
+	width: 1000px;
+	padding-left: 100px;
+	transition: all 0.3s ease-out; 
+}
+
+#siteMain a {
+	text-decoration: none;
+	color: black;
+}
+	
+	
+
+#siteMain2 {
+	width: 350px;
+	top: 50px;
+	right: -245px;
+	position: fixed;
+	background-color: white;
+	transition: all 0.3s ease-out; 
+	
+}
+
+.td2{
+	}
+
+#siteMain2 img {
+	padding-top:15px;
+	width: 50px;
+}
+
+#siteMenu{
+	background-color: white;
+	width: 100%;
+	position:fixed;
+	top: 180px;
+	left : 0px;
+	width: 100%;
+	height: 70px;
+}
+
+#siteMenu td{
+	padding-top:13px;
+	font-size: 30pt;
+	font-family: "C";
+	
+	}
+	
+#mainPapper {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: "ii";
+}	
+#mainLoginPage {
+	//background-color:gray;
+	padding-top:50px;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+/* 
+
+#mainHomeArea2 {
+	width: 300px;
+	position: fixed;
+	top: 50px;
+	right: -200px;
+}
+
+#mainTitleArea a {
+	color: black;
+	text-decoration: none;
+}
+
+#mainHomeArea {
+	top: 40px;
+	left:0px;
+	height: 85px;
+	width: 100%;
+	margin-bottom: 20px;
+	position: fixed;
+}
+
+#mainHomeArea td {
+	width: 33%;
+}
+
+.td2 {
+	width: 22%;
+}
+
+
+#mainMenuArea {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	margin-top: 10px;
+	margin-left: 0px;
+	margin-bottom: 5px;
+	font-size: 20pt;
+	color: #626262;
+	position: fixed;
+}
+
+#mainPapper {
+	margin-top: 200px;
+	width: 100%;
+	height: 400px;
+}
+
+div {
+ background: url("../img/cloud1.png") no-repeat center / cover;
+  -webkit
+}
+.tdStylefont {
+	width: 100%;
+	color: white;
+	opacity: 0.5;
+	font-size: 50pt;
+}
+
+.tdStylefont2 {
+	width: 100%;
+	color: white;
+	opacity: 0.6;
+	font-size: 30pt;
+}
+
+#tdStylefont2 td {
+	width: 100%;
+}
+
+
+button {
+	cursor: pointer;
+}
+
+input, button {
+	outline: none;
+} */

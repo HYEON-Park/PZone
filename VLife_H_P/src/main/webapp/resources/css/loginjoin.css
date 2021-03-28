@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "C";
+	src: url("../font/COI.ttf");
+}
+@font-face {
+    font-family: "ii";
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: "dxb";
+	src: url("../font/dxbt.ttf");
+}
+
+#loginPageArea {
+	font-family: "C";
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 270px;
+	width: 1000px;
+}
+
+#loginPageArea2 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	font-family: "C";
+	font-size: 30pt;
+	color: white;
+}
+
+#loginPageArea input {
+	padding-top: 10px;
+	width: 450px;
+	height: 40px;
+	border-radius: 5px;
+	border: none;
+	text-align: center;
+	font-size: 15pt;
+
+}
+
+#loginPageArea button {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #5586EB;
+	border-radius: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border: none;
+	font-size: 20px;
+	color: white;
+}
+
+#loginPageAreaJoin button {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #5586EB;
+	border-radius: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 13px;
+	padding-right: 13px;
+	border: none;
+	font-size: 20px;
+	color: white;
+	
+}
+
+#loginPageAreaJoin {
+	width: 100%;
+	color: white;
+	font-size: 30pt;
+}
+
+
+
+/*-----------------------------------------------------------*/
+/*-----------------------------JOIN--------------------------*/
+/*-----------------------------------------------------------*/
+
+#joinPageArea {
+	padding-top: 250px; 
+	padding-left: auto;
+	padding-right: auto;
+	width: 500px;
+	
+}
+
+#joinPageArea input{
+	
+	padding-top: 10px;
+	width: 450px;
+	height: 40px;
+	border-radius: 5px;
+	border: none;
+	text-align: center;
+	font-size: 15pt;
+	
+}
+#joinPageArea td{
+	 height: 55px;
+}
+
+#joinPageArea button {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #5586EB;
+	border-radius: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 13px;
+	padding-right: 13px;
+	border: none;
+	font-size: 20px;
+	color: white;
+	
+}
+
+
+
+
+
+
+
+
+
+
