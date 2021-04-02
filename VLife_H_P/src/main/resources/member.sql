@@ -12,9 +12,16 @@ create table vzone_member(
 );
 
 insert into vzone_member values('357thgus','ehsehs2','박소현','?','?','?');
-
-
-
-drop table vzone_member;
-
 select*from vzone_member; 
+drop table vzone_member cascade constraint purge;
+
+--제약조건
+constraint 조건명
+	foreign key(필드명) references 테이블명(필드명)
+	on delete cascade
+	
+create table vzone_sns_txt()
+
+create table vzone_sns_reply(
+
+)

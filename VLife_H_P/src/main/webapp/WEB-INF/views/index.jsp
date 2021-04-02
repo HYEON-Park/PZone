@@ -35,9 +35,9 @@
 								src="resources/img/user.png"></a></td>
 						<td class="td2" align="right"><a href=""><img
 								src="resources/img/we.png" id="city-aqi-container"></a></td>
-						<td class="td2" align="right"><a href=""><img
+						<td class="td2" align="right"><a href="https://www.instagram.com/711p6/"><img
 								src="resources/img/in.png"></a></td>
-						<td class="td2" align="right"><a href=""><img
+						<td class="td2" align="right"><a href="https://github.com/"><img
 								src="resources/img/git.png"></a></td>
 					</tr>
 				</table>
@@ -46,11 +46,11 @@
 	</table>
 	<table id="siteMenu">
 		<tr>
-			<td align="center">Home</td>
-			<td align="center">P Zone</td>
-			<td align="center">V Life</td>
-			<td align="center">Project</td>
-			<td align="center">Contact</td>
+			<td align="center"><a href="">Home</td>
+			<td align="center"><a href="">P Zone</td>
+			<td align="center"><a href="">V Life</td>
+			<td align="center"><a href="">Project</td>
+			<td align="center"><a href="">Profile</td>
 		</tr>
 	</table>
 	<table id="mainPapper">

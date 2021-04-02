@@ -85,7 +85,7 @@ public class MemberDAO {
 		// m.setM_pw(req.getParameter("m_pw"));
 		// System.out.println(m.getM_id());
 
-		try {
+/*		try {
 			List<VMember> m2 = ss.getMapper(VlifeMapper.class).memberSearch(m); // 새로운 객체, 매퍼 가져와서 아이디체크한
 
 			if (m2.size() != 0) { // 가져온 상태
@@ -111,6 +111,7 @@ public class MemberDAO {
 			e.printStackTrace();
 			req.setAttribute("r", "로그인실패 /DB");
 		}
+		*/
 	}
 
 }
