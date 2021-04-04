@@ -1,4 +1,4 @@
-package com.park.vlifehp.snsrmain;
+package com.park.vlifehp.vsnsrmain;
 
 public interface SNSMapper {
 

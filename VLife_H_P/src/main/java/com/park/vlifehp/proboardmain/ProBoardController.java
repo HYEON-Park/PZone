@@ -1,4 +1,4 @@
-package com.park.vlifehp.regmain;
+package com.park.vlifehp.proboardmain;
 
 import javax.servlet.http.HttpServletRequest;
 

@@ -64,54 +64,43 @@ public class MemberDAO {
 	}
 
 	public VMembers memberSearch(VMember m) {
-
 		return new VMembers(ss.getMapper(VlifeMapper.class).memberSearch(m));
 	}
 
+	// 멤버인게 0값이 아니면 로그인 됐으면 홈에
 	public boolean loginCheck(HttpServletRequest req) {
 		VMember m = (VMember) req.getSession().getAttribute("loginMember");
 		if (m != null) {
-			req.setAttribute("loginPage", "member/login.jsp");
+			req.setAttribute("loginPage", "category/pzonehome.jsp");// 로그인성공시
 			return true;
 		}
-		req.setAttribute("homePage", "category/pzonehome.jsp");
+		req.setAttribute("loginPage", "member/login.jsp");// 로그인 미성공시
 		return false;
-
 	}
 
-	public void memberLogin(HttpServletRequest req, HttpServletResponse res, VMember m) {
+	public void memberLogin(HttpServletRequest req, VMember inm) {
 
-		// m.setM_id(req.getParameter("m_id"));
-		// m.setM_pw(req.getParameter("m_pw"));
-		// System.out.println(m.getM_id());
-
-/*		try {
-			List<VMember> m2 = ss.getMapper(VlifeMapper.class).memberSearch(m); // 새로운 객체, 매퍼 가져와서 아이디체크한
-
+		try {
+			List<VMember> m2 = ss.getMapper(VlifeMapper.class).memberSearch(inm); // 새로운 객체, 매퍼 가져와서 아이디체크한
 			if (m2.size() != 0) { // 가져온 상태
 				System.out.println("회원임");
-
-//				 m2.get(1).toString();
-//				System.out.println(mm); //회원정
-
-				if (List<VMember>m2[1].equals(mpw)) {
+				
+				VMember mpw = m2.get(0); //????
+				if (mpw.getM_pw().equals(inm.getM_pw())) {
+					req.getSession().setAttribute("loginMember", mpw);
 					System.out.println("아뒤,비번 일치 성공");
 
 				} else {
 					System.out.println("비번 ㄴㄴ");
 					req.setAttribute("r", "비밀번호를 다시 확인하세요");
 				}
-
 			} else {
 				req.setAttribute("r", "아이디를 다시 확인하세요");
-
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 			req.setAttribute("r", "로그인실패 /DB");
 		}
-		*/
 	}
 
 }

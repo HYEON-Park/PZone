@@ -8,6 +8,7 @@
 <link rel="Stylesheet" href="resources/css/index.css">
 <link rel="Stylesheet" href="resources/css/loginjoin.css">
 <link rel="Stylesheet" href="resources/css/project.css">
+<link rel="Stylesheet" href="resources/css/vlifeSNS.css">
 <script type="text/javascript" src="resources/js/go.js"></script>
 <script type="text/javascript" src="resources/js/check.js"></script>
 <script type="text/javascript" src="resources/js/ParkChecker.js"></script>
@@ -31,14 +32,14 @@
 				</table>
 				<table id="siteMain2">
 					<tr>
-						<td class="td2" align="right"><a href=""><img
-								src="resources/img/user.png"></a></td>
-						<td class="td2" align="right"><a href=""><img
-								src="resources/img/we.png" id="city-aqi-container"></a></td>
-						<td class="td2" align="right"><a href="https://www.instagram.com/711p6/"><img
-								src="resources/img/in.png"></a></td>
-						<td class="td2" align="right"><a href="https://github.com/"><img
-								src="resources/img/git.png"></a></td>
+						<td class="td2" align="right"><a href="">
+							<img src="resources/img/user.png"></a></td>
+						<td class="td2" align="right"><a href="">
+							<img src="resources/img/we.png" id="city-aqi-container"></a></td>
+						<td class="td2" align="right"><a href="https://www.instagram.com/711p6/">
+							<img src="resources/img/in.png"></a></td>
+						<td class="td2" align="right"><a href="https://github.com/">
+							<img src="resources/img/git.png"></a></td>
 					</tr>
 				</table>
 			</td>
@@ -46,17 +47,24 @@
 	</table>
 	<table id="siteMenu">
 		<tr>
-			<td align="center"><a href="">Home</td>
-			<td align="center"><a href="">P Zone</td>
-			<td align="center"><a href="">V Life</td>
-			<td align="center"><a href="">Project</td>
-			<td align="center"><a href="">Profile</td>
+			<td align="center"><a href="home.go">Home</td>
+			<td align="center"><a href="pzone.go">P Zone</td>
+			<td align="center"><a href="vlifesns.go">V Life</td>
+			<td align="center"><a href="project.go">Project</td>
+			<td align="center"><a href="profile.go">Profile</td>
 		</tr>
 	</table>
-	<table id="mainPapper">
+	<table id="mainLoginPage">
 		<tr>
 			<td align="center" id="mainLoginPage">
 			<jsp:include page="${loginPage }"></jsp:include>
+			</td>
+		</tr>
+	</table>
+	<table id="mainHomePage">
+		<tr>
+			<td align="center" id="mainHomePage">
+			<jsp:include page="${contentPage }"></jsp:include>
 			</td>
 		</tr>
 	</table>

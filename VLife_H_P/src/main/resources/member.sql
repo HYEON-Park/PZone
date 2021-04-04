@@ -20,8 +20,19 @@ constraint 조건명
 	foreign key(필드명) references 테이블명(필드명)
 	on delete cascade
 	
-create table vzone_sns_txt()
+create table vzone_sns(
+	m_sns_no number(5) primary key, 
+	m_sns_writer varchar2(10 char) not null,
+	m_sns_title varchar2(300 char) not null,
+	m_sns_txt varchar2(600 char) not null,
+	m_sns_explain varchar2(600 char) not null,
+	m_sns_when date not null,
+	m_sns_color char(7) not null
+);
 
-create table vzone_sns_reply(
-
-)
+	
+create table vzone_reply(
+	m_reply_no number(5) primary key,
+	m_reply_writer varchar2(10 char) not null,
+	m_reply_txt varchar2(600 char) not null
+);

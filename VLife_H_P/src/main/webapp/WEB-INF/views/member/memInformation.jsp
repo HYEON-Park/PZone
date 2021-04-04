@@ -7,7 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-
+	<form action="">
+		<table>
+			<input>
+			<input>
+			<input>
+		</table>	
+	</form>
 </body>
 </html>

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<table id="loginPageArea">
-		<form action="member.login.homego" name="loginForm" onsubmit="ioginCheck();">
+		<form action="member.loginhomego" name="loginForm" onsubmit="ioginCheck();"method="POST">
 			<tr>
 				<td align="center">
 					<table id="loginPageArea2">
@@ -25,7 +25,8 @@
 				<td align="center">
 					<table>
 						<tr>
-							<td align="center"><input name="m_id" autocomplete="ID"
+							<td align="center">
+								<input name="m_id" autocomplete="ID"
 								placeholder="ID" style=""></td>
 						</tr>
 						<tr>
