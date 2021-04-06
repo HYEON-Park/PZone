@@ -31,12 +31,13 @@ public class SNSController {
 		return "index";
 	}
 	
-	@RequestMapping(value = "/vlifesns.write", method = RequestMethod.GET)
-	public String writeSNS(HttpServletRequest req, VMember m) {
+	@RequestMapping(value = "/vlifesns.write", method = RequestMethod.POST)
+	public String writeSNS(HttpServletRequest req, VMember m, SNSWrite sw) {
 		mDAO.memberLogin(req, m);
-		req.setAttribute("contentPage", "category/vlife.jsp");
+		//req.setAttribute("contentPage", "category/vlife.jsp");
 		if (mDAO.loginCheck(req)) {
-			req.setAttribute("contentPage", "category/vlife.jsp"); // 로그인 체크에 해당  = 로그인멤버가 아닌게 아닐시 
+			req.setAttribute("contentPage", "category/vlife.jsp"); // 로그인 체크에 해당  = 로그인멤버가 아닌게 아닐시
+			sDAO.snsWrite(sw, req);
 		} else {
 			req.setAttribute("contentPage", "home.jsp"); // ㄴㄴ일시				
 		}

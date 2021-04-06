@@ -13,10 +13,10 @@ public class BoardController {
 	@Autowired
 	private BoardDAO bDAO;
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/project.go", method = RequestMethod.GET)
 	public String home(HttpServletRequest req) {
-//		req.setAttribute("loginPage", "member/login.jsp");
-//		req.setAttribute("contentPage", "home.jsp");
+		req.setAttribute("loginPage", "member/login.jsp");
+		req.setAttribute("contentPage", "home.jsp");
 		return "index";
 	}
 	
