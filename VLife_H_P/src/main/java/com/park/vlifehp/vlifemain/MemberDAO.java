@@ -85,7 +85,7 @@ public class MemberDAO {
 			if (m2.size() != 0) { // 가져온 상태
 				System.out.println("회원임");
 				
-				VMember mpw = m2.get(0); //????
+				VMember mpw = m2.get(0); //List 0번 
 				if (mpw.getM_pw().equals(inm.getM_pw())) {
 					req.getSession().setAttribute("loginMember", mpw);
 					System.out.println("아뒤,비번 일치 성공");

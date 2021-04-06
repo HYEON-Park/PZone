@@ -42,14 +42,12 @@ public class MemberController {
 	@RequestMapping(value = "/member.loginhomego", method = RequestMethod.POST)
 	public String memberpzHome(HttpServletRequest req, VMember m) {
 		mDAO.memberLogin(req, m);
-		mDAO.loginCheck(req);
-		req.setAttribute("contentPage", "category/pzonehome.jsp");
-		
-		/*if (mDAO.loginCheck(req)) {
+		req.setAttribute("contentPage", "home.jsp");
+		if (mDAO.loginCheck(req)) {
 			req.setAttribute("contentPage", "category/pzonehome.jsp"); //홈에있는거
 		} else {
-			req.setAttribute("contentPage", "home.jsp");
-		}*/
+			req.setAttribute("contentPage", "home.jsp"); //로그인 안됐을 때
+		}
 		return "index";
 	}
 

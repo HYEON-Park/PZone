@@ -1,5 +1,9 @@
 package com.park.vlifehp.vsnsrmain;
 
-public interface SNSMapper {
+import java.util.List;
 
+public interface SNSMapper {
+	public abstract int snsWrite(SNSWrite sw);
+	
+	
 }

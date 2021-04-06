@@ -3,44 +3,37 @@ package com.park.vlifehp.vsnsrmain;
 import java.math.BigDecimal;
 
 public class SNSWrite {
-	private BigDecimal m_sns_no;
-	private String m_sns_writer;
+	private String m_id;
+	
 	private String m_sns_title;
-	private String m_sns_tst;
+	private String m_sns_photo;
+	private String m_sns_txt;
 	private String m_sns_explain;
 	private BigDecimal m_sns_when;
 	private String m_sns_color;
-	
+
 	public SNSWrite() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public SNSWrite(BigDecimal m_sns_no, String m_sns_writer, String m_sns_title, String m_sns_tst,
-			String m_sns_explain, BigDecimal m_sns_when, String m_sns_color) {
+	public SNSWrite(String m_id, String m_sns_title, String m_sns_photo, String m_sns_txt, String m_sns_explain,
+			BigDecimal m_sns_when, String m_sns_color) {
 		super();
-		this.m_sns_no = m_sns_no;
-		this.m_sns_writer = m_sns_writer;
+		this.m_id = m_id;
 		this.m_sns_title = m_sns_title;
-		this.m_sns_tst = m_sns_tst;
+		this.m_sns_photo = m_sns_photo;
+		this.m_sns_txt = m_sns_txt;
 		this.m_sns_explain = m_sns_explain;
 		this.m_sns_when = m_sns_when;
 		this.m_sns_color = m_sns_color;
 	}
 
-	public BigDecimal getM_sns_no() {
-		return m_sns_no;
+	public String getM_id() {
+		return m_id;
 	}
 
-	public void setM_sns_no(BigDecimal m_sns_no) {
-		this.m_sns_no = m_sns_no;
-	}
-
-	public String getM_sns_writer() {
-		return m_sns_writer;
-	}
-
-	public void setM_sns_writer(String m_sns_writer) {
-		this.m_sns_writer = m_sns_writer;
+	public void setM_id(String m_id) {
+		this.m_id = m_id;
 	}
 
 	public String getM_sns_title() {
@@ -51,12 +44,20 @@ public class SNSWrite {
 		this.m_sns_title = m_sns_title;
 	}
 
-	public String getM_sns_tst() {
-		return m_sns_tst;
+	public String getM_sns_photo() {
+		return m_sns_photo;
 	}
 
-	public void setM_sns_tst(String m_sns_tst) {
-		this.m_sns_tst = m_sns_tst;
+	public void setM_sns_photo(String m_sns_photo) {
+		this.m_sns_photo = m_sns_photo;
+	}
+
+	public String getM_sns_txt() {
+		return m_sns_txt;
+	}
+
+	public void setM_sns_txt(String m_sns_txt) {
+		this.m_sns_txt = m_sns_txt;
 	}
 
 	public String getM_sns_explain() {
@@ -82,6 +83,7 @@ public class SNSWrite {
 	public void setM_sns_color(String m_sns_color) {
 		this.m_sns_color = m_sns_color;
 	}
+	
 	
 	
 }
