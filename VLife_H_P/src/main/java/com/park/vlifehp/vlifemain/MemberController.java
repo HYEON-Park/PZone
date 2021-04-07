@@ -19,12 +19,13 @@ public class MemberController {
 	@RequestMapping(value = "/member.join.go", method = RequestMethod.GET)
 	public String memberJoinGo(VMember m, HttpServletRequest req) {
 		req.setAttribute("loginPage", "member/join.jsp");
-		// req.setAttribute("contentPage", "member/join.jsp");
+		req.setAttribute("contentPage", "home.jsp");
 		return "index";
 	}
 
 	// 조인시 아이디 중복체크
-	@RequestMapping(value = "/member.search.go", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+	@RequestMapping(value = "/member.search.go", method = RequestMethod.GET, 
+			produces = "application/json; charset=utf-8")
 	public @ResponseBody VMembers memberSearch(VMember m) {
 		return mDAO.memberSearch(m);
 	}

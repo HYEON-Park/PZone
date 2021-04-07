@@ -9,6 +9,7 @@ function summonTitleArea() {
 		}
 		sm2 = !sm2;
 	});
+	
 	/*
 	 * var sm = false; $("#siteMain").mouseenter(function() { if (!sm) {
 	 * $("#siteMain").css("font-size","65pt"); } else {
@@ -78,7 +79,15 @@ function searchMember(){
 		});
 }
 
-
+function snsWriter(){
+	$("#snsjQuerybutton").click(function() {
+		alert("ss");
+	});
+	/*$("#siteMain").click(function() {
+		$("#siteMain").css("font-size", "55pt");
+	});*/
+	
+}
 
 
 
@@ -88,4 +97,5 @@ $(function() {
 	summonTitleArea();
 	connectIdCheckEvent();
 	loginGoPzone();
+	snsWriter();
 });

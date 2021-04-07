@@ -18,7 +18,8 @@ public class SNSController {
 	
 	@Autowired
 	private SNSDAO sDAO;
-
+	
+	// 폼ㄴㄴ a태그 
 	@RequestMapping(value = "/vlifesns.go", method = RequestMethod.GET)
 	public String goSNS(HttpServletRequest req, VMember m) {
 		mDAO.memberLogin(req, m);
@@ -31,13 +32,20 @@ public class SNSController {
 		return "index";
 	}
 	
+	/*@RequestMapping(value = "/member.join.go", method = RequestMethod.GET)
+	public String memberJoinGo(VMember m, HttpServletRequest req) {
+		req.setAttribute("loginPage", "member/join.jsp");
+		// req.setAttribute("contentPage", "member/join.jsp");
+		return "index";
+	}*/
+	
 	@RequestMapping(value = "/vlifesns.write", method = RequestMethod.POST)
 	public String writeSNS(HttpServletRequest req, VMember m, SNSWrite sw) {
 		mDAO.memberLogin(req, m);
-		//req.setAttribute("contentPage", "category/vlife.jsp");
+		sDAO.snsWrite(sw, req);
+		req.setAttribute("contentPage", "category/vlife.jsp");
 		if (mDAO.loginCheck(req)) {
 			req.setAttribute("contentPage", "category/vlife.jsp"); // 로그인 체크에 해당  = 로그인멤버가 아닌게 아닐시
-			sDAO.snsWrite(sw, req);
 		} else {
 			req.setAttribute("contentPage", "home.jsp"); // ㄴㄴ일시				
 		}

@@ -83,10 +83,10 @@ body {
 }
 
 #siteMenu td{
-	padding-top:13px;
+	padding-top:7px;
 	font-size: 30pt;
 	font-family: "C";
-	
+	text-decoration: none;
 	}
 	
 #mainPapper {

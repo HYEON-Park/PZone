@@ -49,8 +49,8 @@
 		<tr>
 			<td align="center"><a href="home.go">Home</td>
 			<td align="center"><a href="pzone.go">P Zone</td>
-			<td align="center"><a href="vlifesns.go">V Life</td>
-			<td align="center"><a href="project.go">Project</td>
+			<td align="center"><a href="vlifesns.go">Project</td>
+			<td align="center"><a href="amuguna.go">AMUGUNA</td>
 			<td align="center"><a href="profile.go">Profile</td>
 		</tr>
 	</table>

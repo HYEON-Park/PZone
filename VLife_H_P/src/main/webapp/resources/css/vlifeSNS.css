@@ -19,41 +19,11 @@
 	display: none;
 }
 
+#snsTbl{
+	padding-top: 100px;
+	background-color: gray;
+}
+
 #snsBackGroundTbl{
-	
+	bottom: 10px;
 }
-
-#snsWriteTbl{
-	background-color: black;
-}
-
-#snsWriteTbl input{
-	text-align: center;
-	border-style: 3px 3pxsolid;
-	border-color: blue;
-	border-spacing: 3px;
-	
-}
-
-#snsWriteTbl td{
-	
-}
-
-
-
-/* #snsBackGroundTbl{
-	background-color: green;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-}
-
-#snsWriteTbl{
-	padding-top:100px;
-}
-
-#snsWriteTbl td{
-	max-width: 700px;
-	font-family: "dxb";	
-	font-size: 15pt;
-} */
