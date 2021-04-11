@@ -27,3 +27,14 @@
 #snsBackGroundTbl{
 	bottom: 10px;
 }
+
+#snsTbl textarea{
+	padding-top: 10px;
+	width: 450px;
+	height: 40px;
+	border-radius: 5px;
+	border: none;
+	text-align: center;
+	font-size: 15pt;
+
+}

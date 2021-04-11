@@ -51,5 +51,17 @@ public class MemberController {
 		}
 		return "index";
 	}
+	
+	@RequestMapping(value = "/member.info.go", method = RequestMethod.GET)
+	public String memberinfo(HttpServletRequest req, VMember m) {
+		mDAO.memberLogin(req, m);
+		req.setAttribute("contentPage", "home.jsp");
+		if (mDAO.loginCheck(req)) {
+			req.setAttribute("contentPage", "member/memInformation.jsp"); //홈에있는거
+		} else {
+			req.setAttribute("contentPage", "home.jsp"); //로그인 안됐을 때
+		}
+		return "index";
+	}
 
 }

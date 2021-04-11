@@ -32,10 +32,10 @@
 				</table>
 				<table id="siteMain2">
 					<tr>
+						<td class="td2" align="right"><a href="memberinfo.go">
+							<img src="resources/img/user.png" style="max-width: 95px;"></a></td>
 						<td class="td2" align="right"><a href="">
-							<img src="resources/img/user.png"></a></td>
-						<td class="td2" align="right"><a href="">
-							<img src="resources/img/we.png" id="city-aqi-container"></a></td>
+							<img src="resources/img/weather.png" id="city-aqi-container"></a></td>
 						<td class="td2" align="right"><a href="https://www.instagram.com/711p6/">
 							<img src="resources/img/in.png"></a></td>
 						<td class="td2" align="right"><a href="https://github.com/">
@@ -47,11 +47,11 @@
 	</table>
 	<table id="siteMenu">
 		<tr>
-			<td align="center"><a href="home.go">Home</td>
-			<td align="center"><a href="pzone.go">P Zone</td>
-			<td align="center"><a href="vlifesns.go">Project</td>
-			<td align="center"><a href="amuguna.go">AMUGUNA</td>
-			<td align="center"><a href="profile.go">Profile</td>
+			<td align="center" class="aa"><a href="pzone.go">P Zone</td>
+			<td align="center" class="aa"><a href="vlifesns.go">Project</td>
+			<td align="center" class="aa"><a href="plife.go">P-life</td>
+			<td align="center" class="aa"><a href="profile.go">Profile</td>
+			<td id="lastMenu"></td>
 		</tr>
 	</table>
 	<table id="mainLoginPage">

@@ -10,7 +10,7 @@
 <script type="text/javascript" src="resources/js/go.js"></script>
 </head>
 <body>
-	<table>
+<!-- 	<table>
 		<tr>
 			<td>
 			로그인 안~~~~~~~~~~~~~~~~한거
@@ -18,6 +18,6 @@
 			</td>
 		</tr>
 	</table>
-
+ -->
 </body>
 </html>

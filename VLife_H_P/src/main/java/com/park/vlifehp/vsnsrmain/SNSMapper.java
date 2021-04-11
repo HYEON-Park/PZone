@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface SNSMapper {
 	public abstract int snsWrite(SNSWrite sw);
-	
+	public abstract List<SNSWrite> snsGet();
 	
 }

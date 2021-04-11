@@ -1,6 +1,7 @@
 package com.park.vlifehp.vsnsrmain;
 
 import java.net.URLEncoder;
+import java.util.List;
 import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,14 +28,6 @@ public class SNSDAO {
 	public void snsWrite(SNSWrite sw, HttpServletRequest req) {
 		
 		try {
-			String token = req.getParameter("token"); // 토큰 받아오기
-			
-			String st2 = (String) req.getSession().getAttribute("st"); // 토큰
-			
-			if (st2 != null && token.equals(st2)) {
-				req.setAttribute("r", "글쓰기실패(새로고침)");
-				return;
-			}
 			
 			String path = req.getSession().getServletContext().getRealPath("resources/img");
 			System.out.println(path);
@@ -46,14 +39,38 @@ public class SNSDAO {
 					new DefaultFileRenamePolicy()); // 중복처리
 			//insert into vzone_sns values(vzone_sns_seq.nextval, #{m_id}, #{m_sns_title}, 
 			//#{m_sns_photo}, #{m_sns_txt}, #{m_sns_explain}, sysdate, #{m_sns_color})
+			String token = req.getParameter("token"); // 토큰 받아오기
 			
-			//아이디
+			String st2 = (String) req.getSession().getAttribute("st"); // 토큰
+			
+			if (st2 != null && token.equals(st2)) {
+				req.setAttribute("r", "글쓰기실패(새로고침)");
+				return;
+			}
+			//사진 넣는거라 다 겟파라메터로 받아와야함
+			VMember m = (VMember) req.getSession().getAttribute("loginMember");
+			sw.setM_id(m.getM_id()); //세션에서 가져오는거라 
+			System.out.println(m.getM_id());
+			sw.setM_sns_title(mr.getParameter("m_sns_title"));
+			System.out.println(sw.getM_sns_title());
+			sw.setM_sns_txt(mr.getParameter("m_sns_txt"));
+			sw.setM_sns_explain(mr.getParameter("m_sns_explain"));
+			System.out.println(sw.getM_sns_explain());
+			
+			sw.setM_sns_photo(mr.getParameter("m_sns_photo"));
+			String m_sns_photoK = URLEncoder.encode("m_sns_photo", "utf-8").replace("+", " "); // 톰캣이 한글명파일 인식 못해서(%5A+$5A2.png)
+			sw.setM_sns_photo(m_sns_photoK);
+			sw.setM_sns_color(colors[new Random().nextInt(colors.length)]);
+			
+			/*//아이디
 			VMember m = (VMember) req.getSession().getAttribute("loginMember");
 			sw.setM_id(m.getM_id());
+			System.out.println(m.getM_id());
 			//타이틀
 			String title = sw.getM_sns_title(); //가져와서 >엔코딩>지정하기
 			title = title.replace("\r\n", "<br>");
 			sw.setM_sns_title(title);
+			System.out.println(title);
 			//사진
 			String m_sns_photo = mr.getFilesystemName("m_sns_photo");
 			String m_sns_photoK = URLEncoder.encode(m_sns_photo,"utf-8").replace("+", " ");
@@ -68,7 +85,7 @@ public class SNSDAO {
 			sw.setM_sns_explain(explain);
 			
 			sw.setM_sns_color(colors[new Random().nextInt(colors.length)]);
-			
+			*/
 			
 			if (ss.getMapper(SNSMapper.class).snsWrite(sw) == 1) {
 				System.out.println("ㅇㅇ");
@@ -79,10 +96,20 @@ public class SNSDAO {
 			}
 			
 		} catch (Exception e) {
-			System.out.println("ㄴㄴㄴ");
+			e.printStackTrace();
 			req.setAttribute("r","글작성 오류");
 			
 			
+		}
+	}
+	
+	public void snsGet(HttpServletRequest req) {
+		try {
+			List<SNSWrite> snsw = ss.getMapper(SNSMapper.class).snsGet();
+			req.setAttribute("snsw", snsw);
+		} catch (Exception e) {
+			e.printStackTrace();
+			req.setAttribute("r", "ㄴㄴㄴ");
 		}
 	}
 
