@@ -32,8 +32,8 @@
 						<td align="left" id="proIntro">
 							&nbsp;&nbsp;<br>
 							&nbsp;&nbsp;박소현 SoHyeon Park<br>
+							&nbsp;&nbsp;끈기로  다져진  신입  백앤드 개발자<br>
 							&nbsp;&nbsp;<br>
-							&nbsp;&nbsp;신입  백앤드 개발자<br>
 							&nbsp;&nbsp;hyeonpaaark@gmail.com<br>
 							&nbsp;&nbsp;+82)010-8079-9075<br>
 							&nbsp;&nbsp;github.com/HYEON-Park<br>

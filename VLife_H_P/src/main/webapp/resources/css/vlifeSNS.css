@@ -19,9 +19,36 @@
 	display: none;
 }
 
+#proResultBackTbl{
+	margin-top:50px;
+	background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----구분선---------------------------------------------------------------------------*/
+
 #snsTbl{
 	padding-top: 100px;
 	background-color: gray;
+}
+
+#snsWriteTbl{
+	background-color: green;
+	position:fixed;
+	bottom: -280px;
 }
 
 #snsBackGroundTbl{

@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "el";
+	src: url("../font/ExtraLight.otf");
+}
+@font-face {
+	font-family: "ll";
+	src: url("../font/Light.otf");
+}
+@font-face {
+	font-family: "sb";
+	src: url("../font/Semibold.otf");
+}
+@font-face {
+	font-family: "ng";
+	src: url("../font/NG.ttf");
+}
+
+
+#plifeTbl{
+	font-family: "sb"; /* font-weight: bold; */
+	font-size:13pt;
+	width: 1050px;
+	/* background-color: #EAEAEA; */
+	
+	}
+
+
+.plifeReg {
+	width:300px;
+	height: 250px;
+	float: left; margin: 2px;
+	/*배열 자리 설정/ left 왼쪽 부터 , margin은 띄우기 */
+}
+
+.plifeReg img:hover{
+	border: black 5px solid;
+}
+
+
+.plifeReg img{
+	margin-top: 28px;
+	width: 300px;
+	height: 250px;
+	border-radius: 10px;
+	border: #EAEAEA 3px solid;
+	
+}
+.plifeReg{
+	text-align: center;
+	border-spacing: 17px;	
+}

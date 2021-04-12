@@ -22,12 +22,13 @@ public class PZoneController {
 	
 	@RequestMapping(value = "/pzone.go", method = RequestMethod.GET)
 	public String pzonehome(HttpServletRequest req, VMember m) {
-		mDAO.memberLogin(req, m);
+		//mDAO.memberLogin(req, m);
 		if (mDAO.loginCheck(req)) {
 			req.setAttribute("contentPage", "category/pzonehome.jsp"); 
 			//로그인체크에 걸려서(해당아이디가 있으면)다음반응 주삼
 		} else {
-			req.setAttribute("contentPage", "category/home.jsp");
+			req.setAttribute("loginPage", "member/login.jsp");
+			req.setAttribute("contentPage", "home.jsp");
 			 //로그인 안됐을 때
 		}
 		return "index";

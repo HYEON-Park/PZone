@@ -71,7 +71,7 @@ public class MemberDAO {
 	public boolean loginCheck(HttpServletRequest req) {
 		VMember m = (VMember) req.getSession().getAttribute("loginMember");
 		if (m != null) {
-			req.setAttribute("loginPage", "category/pzonehome.jsp");// 로그인성공시
+			req.setAttribute("loginPage", "indexHidden.jsp");// 로그인성공시
 			return true;
 		}
 		req.setAttribute("loginPage", "member/login.jsp");// 로그인 미성공시

@@ -25,6 +25,10 @@
 	src: url("../font/Semibold.otf");
 }
 @font-face {
+	font-family: "ng";
+	src: url("../font/NG.ttf");
+}
+@font-face {
     font-family: "ii";
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff') format('woff');
     font-weight: normal;
@@ -77,7 +81,7 @@ body {
 #siteMain2 {
 	width: 350px;
 	top: 50px;
-	right: -245px;
+	right: -225px;
 	position: fixed;
 	background-color: white;
 	transition: all 0.3s ease-out; 
@@ -109,8 +113,8 @@ body {
 #siteMenu td{
 	padding-top:7px;
 	font-size: 35pt;
-	font-family: "sb";
-	font-weight: bold; 
+	font-family: "pb";
+	font-weight: bolder; 
 	text-decoration: none;
 	}
 
@@ -133,7 +137,16 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+#mainHomePage {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
+
+#hiddenTbl{
+	padding-top: 100px;
+	}
 
 
 /* 
