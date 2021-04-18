@@ -21,41 +21,52 @@
 
 #proResultBackTbl{
 	margin-top:50px;
-	background-color: black;
+	border-spacing: 5px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+#proResultTbl {
+	width: 700px;
+	height: 200px;
+}
 
 
 /*----구분선---------------------------------------------------------------------------*/
 
 #snsTbl{
 	padding-top: 100px;
-	background-color: gray;
 }
 
-#snsWriteTbl{
-	background-color: green;
+#snsWriteBackTbl{
+	width: 800px;
+	height:300px;
+	background-color: aqua;
+}
+
+#snsWriteTbl {
 	position:fixed;
-	bottom: -280px;
+	bottom: -300px;
+	width: 1000px;
+}
+#snsWriteTbl td{
+	padding-left:10px;
 }
 
 #snsBackGroundTbl{
 	bottom: 10px;
 }
 
-#snsTbl textarea{
+
+#snsWriteTbl input{
+	padding-top: 10px;
+	width: 450px;
+	height: 40px;
+	border-radius: 5px;
+	border: none;
+	text-align: center;
+	font-size: 15pt;
+	
+}
+
+#snsWriteTbl textarea{
 	padding-top: 10px;
 	width: 450px;
 	height: 40px;

@@ -7,7 +7,6 @@
 <title>P Zone</title>
 </head>
 <body>
-	<form>
 		<table id="projectRegTbl">
 			<tr>
 				<td align="center"><input name="" ,type="hidden"
@@ -21,7 +20,6 @@
 				</td>
 			</tr>
 		</table>
-	</form>
 	<form>
 		<table>
 			<tr>

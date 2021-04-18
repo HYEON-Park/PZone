@@ -8,7 +8,7 @@
 <title>P Zone</title>
 </head>
 <body>
-<h1>sdfss</h1>
+<h1>JOIN</h1>
 	<form action="member.join" method="post" enctype="multipart/form-data"
 		name="joinForm" onsubmit="return joinCheckff();">
 		<table id="joinPageArea">

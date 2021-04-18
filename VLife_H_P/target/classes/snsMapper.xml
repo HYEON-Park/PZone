@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.park.vlifehp.vsnsrmain.SNSMapper">
-<insert id="snsWrite" parameterType="com.park.vlifehp.vsnsrmain.SNSWrite">
-	insert into vzone_sns values(vzone_sns_seq.nextval, #{m_id}, #{m_sns_title}, #{m_sns_photo}, #{m_sns_txt}, #{m_sns_explain}, sysdate, #{m_sns_color})
-</insert>
-<select id="snsGet" resultType="com.park.vlifehp.vsnsrmain.SNSWrite">
-	select * from vzone_sns order by m_id
-</select>
-
-
+	<insert id="snsWrite" parameterType="com.park.vlifehp.vsnsrmain.SNSWrite">
+		insert into vzone_sns values(vzone_sns_seq.nextval, #{m_id}, #{m_sns_title}, #{m_sns_photo}, #{m_sns_txt}, #{m_sns_explain}, sysdate, #{m_sns_color})
+	</insert>
+	<select id="snsGet" parameterType="com.park.vlifehp.vsnsrmain.SNSWrite"
+			resultType="com.park.vlifehp.vsnsrmain.SNSWrite">
+		select * from vzone_sns order by m_sns_writer
+	</select>
+	<select id="getAllMsgCount" resultType="java.lang.Integer">
+		
+	</select>
 </mapper>

@@ -7,41 +7,54 @@
 <head>
 <meta charset="UTF-8">
 <title>P Zone</title>
+<script type="text/javascript">
+  /* 	$(function () {
+		$("#snsWriteTbl img").click(function() {
+			alert("ss");
+		});
+
+	}); */
+</script>
 </head>
 <body>
 	<table id="proResultBackTbl">
 		<tr>
 			<td>
-				<table id="proResultTbl">
-					<tr>
+			<c:forEach var="snsw" items="${snsw }">
+				<table id="proResultTbl" style="box-shadow: 5px 5px 5px ${snsw.m_sns_color};">
+					<tr>	
 						<td>
-							<c:forEach var="snsw" items="${snsw }">
-							${snsw.m_sns_writer }<br>
-							 ${snsw.m_sns_title }<br> 
-							<img src="resources/img/${snsw.m_sns_photo }"><br> 
+							${snsw.m_id }<br>
+							 ${snsw.m_sns_title }<br>
+								<img src="resources/img/${snsw.m_sns_photo }">
+								<br> 
 							${snsw.m_sns_txt }<br>
-							<fmt:formatDate
-								value="${snsw.m_sns_when }" type="yyyy/MM/dd" />
+								<fmt:formatDate value="${snsw.m_sns_when }" pattern="yyyy-MM-dd"/>
 							${snsw.m_sns_explain } 
-								</td>
-							</c:forEach>
+						</td>
 					</tr>
 				</table>
+							</c:forEach>
 			</td>
 		</tr>
 	</table>
-	<table>
+
+	<table id="snsWriteBackTbl">
 		<form action="vlifesns.write" name="snswriteForm" method="post"
 			enctype="multipart/form-data">
 			<tr>
-				<td><input name="token" value="${token }" type="hidden">
+				<td align="center">
+					<input name="token" value="${token }" type="hidden">
 				</td>
 			</tr>
 			<tr>
-				<td>
+				<td align="center">
 					<table id="snsWriteTbl">
 						<tr>
-							<td id="snsjQuerybutton" align="right">글쓰기>></td>
+							<td align="right">
+							<img id="snsWriteTblimg"
+								src="resources/img/writing.png" style="max-width: 55px;">
+							</td>
 						</tr>
 						<tr>
 							<td align="center">
@@ -50,20 +63,21 @@
 							</td>
 						</tr>
 						<tr>
-							<td align="right">
-							<input name="m_sns_photo" type="file">
+							<td align="left">프로젝트 사진 :<input name="m_sns_photo" type="file">
 							</td>
 						</tr>
 						<tr>
-							<td align="center"><textarea name="m_sns_txt"
+							<td align="center">
+								<textarea name="m_sns_txt"
 									placeholder="스택 입력" maxlength="1000"
-									style="width: 700px; height: 50px;"></textarea><br> <input
+									style="width: 700px; height: 50px;"></textarea><br> 
+								<input
 								name="m_sns_explain" placeholder="내용 입력" maxlength="1000"
 								style="width: 700px; height: 100px;"><br></td>
 						</tr>
 						<tr>
 							<td align="right">
-								<button id="snsWriteTblBT">작성</button>
+								<button id="snsWriteTblButton">작성</button>
 							</td>
 						</tr>
 					</table>

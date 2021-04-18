@@ -1,6 +1,7 @@
 package com.park.vlifehp.vsnsrmain;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 public class SNSWrite {
 	private String m_id;
@@ -9,15 +10,15 @@ public class SNSWrite {
 	private String m_sns_photo;
 	private String m_sns_txt;
 	private String m_sns_explain;
-	private BigDecimal m_sns_when;
+	private Date m_sns_when;
 	private String m_sns_color;
-
+	
 	public SNSWrite() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public SNSWrite(String m_id, String m_sns_title, String m_sns_photo, String m_sns_txt, String m_sns_explain,
-			BigDecimal m_sns_when, String m_sns_color) {
+			Date m_sns_when, String m_sns_color) {
 		super();
 		this.m_id = m_id;
 		this.m_sns_title = m_sns_title;
@@ -68,11 +69,11 @@ public class SNSWrite {
 		this.m_sns_explain = m_sns_explain;
 	}
 
-	public BigDecimal getM_sns_when() {
+	public Date getM_sns_when() {
 		return m_sns_when;
 	}
 
-	public void setM_sns_when(BigDecimal m_sns_when) {
+	public void setM_sns_when(Date m_sns_when) {
 		this.m_sns_when = m_sns_when;
 	}
 

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>P Zone</title>
 </head>
 <body>
 	<table id="loginPageArea">

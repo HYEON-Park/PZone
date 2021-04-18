@@ -15,16 +15,12 @@
 <script type="text/javascript" src="resources/js/check.js"></script>
 <script type="text/javascript" src="resources/js/ParkChecker.js"></script>
 <script type="text/javascript" src="resources/js/jQuery.js"></script>
-<script type="text/javascript" src="resources/js/jQ.js"></script>
-
 
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <!-- 		http/https:를 안쓰면 내 사이트가 http면 그걸로 s 면 그걸로 바꿔줌 -->
 <script  type="text/javascript"  charset="utf-8">  
 
-
     _aqiFeed({  container:"city-aqi-container",  city:"seoul"  });
-    
     
     
 </script>
@@ -81,3 +77,4 @@
 	
 </body>
 </html>
+<script type="text/javascript" src="resources/js/jQ.js"></script>

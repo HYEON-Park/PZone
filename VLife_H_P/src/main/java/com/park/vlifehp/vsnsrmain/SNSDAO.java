@@ -16,14 +16,21 @@ import com.park.vlifehp.vlifemain.VMember;
 
 @Service
 public class SNSDAO {
+	private int allMsgCount;
 	private String[] colors;
 
 	@Autowired
 	private SqlSession ss;
 
+
 	public SNSDAO() {
 		colors = new String[] { "#B2CCFF", "#B5B2FF", "#D1B2FF", "#B2EBF4", "#B7F0B1", "#BCE55C" };
 	}
+	
+	public void countAllMsg() {
+		allMsgCount = ss.getMapper(SNSMapper.class).getAllMsgCount();
+	}
+	
 
 	public void snsWrite(SNSWrite sw, HttpServletRequest req) {
 		
@@ -105,12 +112,43 @@ public class SNSDAO {
 	
 	public void snsGet(HttpServletRequest req) {
 		try {
-			List<SNSWrite> snsw = ss.getMapper(SNSMapper.class).snsGet();
-			req.setAttribute("snsw", snsw);
+		List<SNSWrite> snsw = ss.getMapper(SNSMapper.class).snsGet();
+		req.setAttribute("snsw", snsw);
 		} catch (Exception e) {
 			e.printStackTrace();
 			req.setAttribute("r", "ㄴㄴㄴ");
 		}
+		
 	}
+	
+	
+	/*
+	public void snsGet(HttpServletRequest req, int page) {
+		
+		req.setAttribute("curPage", page);
+
+		String search = (String) req.getSession().getAttribute("search");
+		int msgCount = 0;
+		if (search == null) {
+			msgCount = allMsgCount;
+			search = "";
+		} else {
+			SNSSelector sSel2 = new SNSSelector(search, 0, 0);
+			msgCount = ss.getMapper(SNSMapper.class).getSearchMsgCount(sSel2);
+		}
+		int allPageCount = (int) Math.ceil((double) msgCount / so.getSnsMsgPerPage());
+		req.setAttribute("allPageCount", allPageCount);
+
+		int start = (page - 1) * so.getSnsMsgPerPage() + 1;
+		int end = (page == allPageCount) ? msgCount : start + so.getSnsMsgPerPage() - 1;
+
+		SNSSelector sSel = new SNSSelector(search, start, end);
+		List<SNSWrite> snsw = ss.getMapper(SNSMapper.class).getMsg(sSel);
+
+		req.setAttribute("snsw", snsw);
+		
+		
+		
+	}*/
 
 }

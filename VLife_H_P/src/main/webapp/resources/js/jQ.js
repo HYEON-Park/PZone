@@ -35,6 +35,10 @@ function summonTitleArea() {
 
 }
 
+
+
+
+
 function connectSearchAddressEvent() {
 	$("#joinm_addr1, #joinm_addr2").click(function() {
 		new daum.Postcode({
@@ -45,6 +49,10 @@ function connectSearchAddressEvent() {
 		}).open();
 	});
 }
+
+
+
+
 
 // 아이디 쓴게 DB에 중복 되는가????
 
@@ -65,6 +73,12 @@ function connectIdCheckEvent() {
 	});
 }
 
+
+
+
+
+
+
 //join시에 아이디 유효성
 function searchMember(){
 		var m_id = $("#joinm_id").val();
@@ -79,15 +93,32 @@ function searchMember(){
 		});
 }
 
-function snsWriter(){
-	$("#snsjQuerybutton").click(function() {
-		alert("ss");
-	});
+
+//proSNS 글쓰기칸 보이게
+
+	
+	
+/*$("#snsWriteTbl img").click(function() {
+	$("#snsWriteTbl").css("bottom", "0px");
+	
+});
+*/
+
 	/*$("#siteMain").click(function() {
 		$("#siteMain").css("font-size", "55pt");
 	});*/
 	
-}
+
+	var sm2 = false;
+	$("#snsWriteTbl img").click(function() {
+		if (!sm2) {
+			$("#snsWriteTbl").css("bottom","0px");
+		} else {
+			$("#snsWriteTbl").css("bottom","-300px");
+		}
+		sm2 = !sm2;
+	});
+	
 
 
 
@@ -97,5 +128,6 @@ $(function() {
 	summonTitleArea();
 	connectIdCheckEvent();
 	loginGoPzone();
-	snsWriter();
+	
+	
 });
