@@ -32,8 +32,8 @@
 			<tr>
 				<td align="center" >
 				<br>주소<br>
-				<input id="joinm_addr1" readonly="readonly" placeholder="우편번호" autocomplete="off" name="m_addr"><br>
-				<input id="joinm_addr2" readonly="readonly" placeholder="주소" autocomplete="off" name="m_addr2"><br>
+				<input id="joinm_addr1" readonly="readonly" placeholder="우편번호" autocomplete="off" name="m_addr"><p>
+				<input id="joinm_addr2" readonly="readonly" placeholder="주소" autocomplete="off" name="m_addr2"><p>
 				<input placeholder="상세주소" autocomplete="off" name="m_addr3">
 				</td>
 			</tr>
@@ -57,8 +57,7 @@
 					<c:forEach var="rr" items="${r }">
 					${rr }
 					</c:forEach>
-					
-					<br><br><br>
+					<p>
 					<button>가입하기</button>
 					<br><br><br>
 					<br><br><br>

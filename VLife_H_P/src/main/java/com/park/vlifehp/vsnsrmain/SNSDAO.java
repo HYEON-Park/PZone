@@ -64,9 +64,10 @@ public class SNSDAO {
 			sw.setM_sns_explain(mr.getParameter("m_sns_explain"));
 			System.out.println(sw.getM_sns_explain());
 			
-			sw.setM_sns_photo(mr.getParameter("m_sns_photo"));
-			String m_sns_photoK = URLEncoder.encode("m_sns_photo", "utf-8").replace("+", " "); // 톰캣이 한글명파일 인식 못해서(%5A+$5A2.png)
+			String m_sns_photo = mr.getFilesystemName("m_sns_photo");
+			String m_sns_photoK = URLEncoder.encode(m_sns_photo, "utf-8").replace("+", " "); // 톰캣이 한글명파일 인식 못해서(%5A+$5A2.png)
 			sw.setM_sns_photo(m_sns_photoK);
+			
 			sw.setM_sns_color(colors[new Random().nextInt(colors.length)]);
 			
 			/*//아이디

@@ -43,7 +43,7 @@
 							<img src="resources/img/weather.png" id="city-aqi-container"></a></td>
 						<td class="td2" align="right"><a href="https://www.instagram.com/711p6/">
 							<img src="resources/img/in.png"></a></td>
-						<td class="td2" align="right"><a href="https://github.com/">
+						<td class="td2" align="right"><a href="https://github.com/HYEON-Park">
 							<img src="resources/img/git.png"></a></td>
 					</tr>
 				</table>

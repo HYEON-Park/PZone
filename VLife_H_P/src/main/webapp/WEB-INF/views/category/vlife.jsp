@@ -26,7 +26,7 @@
 						<td>
 							${snsw.m_id }<br>
 							 ${snsw.m_sns_title }<br>
-								<img src="resources/img/${snsw.m_sns_photo }">
+								<img src="resources/img/${snsw.m_sns_photo }"  style="max-width: 300px; height: 200px;">
 								<br> 
 							${snsw.m_sns_txt }<br>
 								<fmt:formatDate value="${snsw.m_sns_when }" pattern="yyyy-MM-dd"/>
@@ -59,21 +59,21 @@
 						<tr>
 							<td align="center">
 							<input name="m_sns_title"
-								placeholder="프로젝트 명" style="width: 700px; height: 50px;">
+								placeholder="프로젝트 명" style="width: 400px; height: 70px;">
 							</td>
 						</tr>
 						<tr>
-							<td align="left">프로젝트 사진 :<input name="m_sns_photo" type="file">
+							<td align="center"> 사진: <input name="m_sns_photo" type="file">
 							</td>
 						</tr>
 						<tr>
 							<td align="center">
 								<textarea name="m_sns_txt"
 									placeholder="스택 입력" maxlength="1000"
-									style="width: 700px; height: 50px;"></textarea><br> 
+									style="width: 400px; height: 150px; text-align: left;"></textarea><br> 
 								<input
 								name="m_sns_explain" placeholder="내용 입력" maxlength="1000"
-								style="width: 700px; height: 100px;"><br></td>
+								style="width: 400px; height: 150px;"><br></td>
 						</tr>
 						<tr>
 							<td align="right">

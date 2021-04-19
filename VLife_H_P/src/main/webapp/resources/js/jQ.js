@@ -112,9 +112,9 @@ function searchMember(){
 	var sm2 = false;
 	$("#snsWriteTbl img").click(function() {
 		if (!sm2) {
-			$("#snsWriteTbl").css("bottom","0px");
+			$("#snsWriteTbl").css("bottom","110px");
 		} else {
-			$("#snsWriteTbl").css("bottom","-300px");
+			$("#snsWriteTbl").css("bottom","-465px");
 		}
 		sm2 = !sm2;
 	});
