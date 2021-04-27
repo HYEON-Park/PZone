@@ -8,12 +8,7 @@
 <meta charset="UTF-8">
 <title>P Zone</title>
 <script type="text/javascript">
-  /* 	$(function () {
-		$("#snsWriteTbl img").click(function() {
-			alert("ss");
-		});
 
-	}); */
 </script>
 </head>
 <body>
@@ -33,8 +28,9 @@
 							${snsw.m_sns_explain } 
 						</td>
 					</tr>
+					
 				</table>
-							</c:forEach>
+			</c:forEach>
 			</td>
 		</tr>
 	</table>
@@ -80,6 +76,7 @@
 								<button id="snsWriteTblButton">작성</button>
 							</td>
 						</tr>
+						
 					</table>
 				</td>
 			</tr>

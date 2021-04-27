@@ -9,11 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.park.vlifehp.pzone.BoardDAO;
+
 @Controller
 public class MemberController {
 
 	@Autowired
 	private MemberDAO mDAO;
+	@Autowired
+	private BoardDAO bDAO;
 
 //	로긴에서 조인으로 가는거  //이거 js 설정	
 	@RequestMapping(value = "/member.join.go", method = RequestMethod.GET)
@@ -35,14 +39,17 @@ public class MemberController {
 	public String memberJoin(HttpServletRequest req, VMember m) {
 		mDAO.joinGO(m, req);
 		mDAO.loginCheck(req);
+		bDAO.boardGet(req);
 		req.setAttribute("contentPage", "category/pzonehome.jsp");
 		return "index";
+		
 	}
 	
 	//로그인하면 들어가는 홈
 	@RequestMapping(value = "/member.loginhomego", method = RequestMethod.POST)
 	public String memberpzHome(HttpServletRequest req, VMember m) {
 		mDAO.memberLogin(req, m);
+		bDAO.boardGet(req);
 		if (mDAO.loginCheck(req)) {
 			req.setAttribute("contentPage", "category/pzonehome.jsp"); //홈에있는거
 		} else {

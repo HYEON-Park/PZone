@@ -6,7 +6,7 @@
 	</insert>
 	<select id="snsGet" parameterType="com.park.vlifehp.vsnsrmain.SNSWrite"
 			resultType="com.park.vlifehp.vsnsrmain.SNSWrite">
-		select * from vzone_sns order by m_sns_writer
+		select * from vzone_sns order by m_sns_when
 	</select>
 	<select id="getAllMsgCount" resultType="java.lang.Integer">
 		

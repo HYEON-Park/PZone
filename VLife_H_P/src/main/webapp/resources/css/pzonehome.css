@@ -30,29 +30,108 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+	font-family: "pb";
+	src: url("../font/probold.otf");
+}
+@font-face {
+	font-family: "sb";
+	src: url("../font/Semibold.otf");
+}
 
 /*-----------------------------------------------*/
 
 
-#phomeTbl{
-	width: 1050px;
-	}
 
+#pzoneTbl{
+	width: 1000px;
+	padding-top: 3px;
+}
 
-.phomeReg {
-	width:300px;
-	hi
+#pzoneTblTop {
+	width: 1000px; 
+	height: 50px;
+	font-family: pb;
+	font-size: 17pt;
+}
+
+#pzoneTblReg {
+	width: 1000px; 
+	height: 513px;
+	font-family: ll;
+	font-size: 15pt; 
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #EAEAEA; opacity: 0.8;
+	padding-left: 25px;
+}
+
+.pzoneTblRegTd a{
+	text-decoration: none; color: black;
+}
+
+.pzoneReg {
+	
+	padding-right: 25px;
 	/*box-shadow: black 5px 5px 5px;*/
 	float: left; margin: 5px;
 	/*배열 자리 설정/ left 왼쪽 부터 , margin은 띄우기 */
+	text-decoration: none;
+	 font-weight: bolder;
 }
-.phomeReg img{
-	margin-top: 30px;
-	max-width: 300px;
-	
+
+#pzoneRegButton{
+	position:fixed;
+	width:80px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #5586EB;
+	border-radius: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right:15px;
+	border: none;
+	font-size: 13pt; font-family: ll;
+	color: white;
 }
-.phomeReg{
-	text-align: center;
-	border-spacing: 17px;	
+
+
+
+
+
+/*-----------------------------------------------*/
+
+#pPBInfo1 {
+	padding-top:30px;
+	width: 800px; height: 500px;
+}
+
+
+#pPBInfoTblTitle{
+	font-size: 25pt; 
+	width: 800px; 
+	height: 50px;
+	font-family: sb;
+}
+
+#pPBInfoTblText{
+	font-family: el;
+	font-size: 16pt; 
+	width: 800px; 
+	height: 350px;
+}
+
+#pPBinfoUpdateButton {
+	position:fixed;
+	width:80px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #5586EB;
+	border-radius: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right:10x;
+	border: none;
+	font-size: 20px;
+	color: white;
 }

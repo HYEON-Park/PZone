@@ -56,8 +56,12 @@ public class SNSDAO {
 			}
 			//사진 넣는거라 다 겟파라메터로 받아와야함
 			VMember m = (VMember) req.getSession().getAttribute("loginMember");
-			sw.setM_id(m.getM_id()); //세션에서 가져오는거라 
-			System.out.println(m.getM_id());
+			sw.setM_id(m.getM_id()); //세션에서 가져오는거라
+			
+			//System.out.println(m.getM_id());
+	
+			
+			
 			sw.setM_sns_title(mr.getParameter("m_sns_title"));
 			System.out.println(sw.getM_sns_title());
 			sw.setM_sns_txt(mr.getParameter("m_sns_txt"));

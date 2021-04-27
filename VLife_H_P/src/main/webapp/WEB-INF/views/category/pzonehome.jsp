@@ -1,43 +1,66 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>P Zone</title>
-<style type="text/css">
-</style>
+<script type="text/javascript">
+	/* $(function() {
+		$(".dataTr").click(function() {
+			"goBoardInfoGo();"
+		});
+
+	});
+	 */
+</script>
 </head>
 <body>
-	<table id="phomeTbl">
+	<table id="pzoneTbl">
 		<tr>
 			<td>
-				<table class="phomeReg">
+				<table class="pzoneReg">
 					<tr>
-						<td><img src="resources/img/11.png"> 기술 블로그를 만들자!</td>
-					</tr>
-				</table>
-				<table class="phomeReg">
-					<tr>
-						<td><img src="resources/img/11.png"> 2021 AI 인공지능 참관객 간
-							날</td>
-					</tr>
-				</table>
-				<table class="phomeReg">
-					<tr>
-						<td><img src="resources/img/11.png"> 1111111111 (1)
+						<td align="center">
+							<table id="pzoneTblTop">
+								<tr>
+									<th>제목</th>
+									<th>날짜</th>
+								</tr>
+							</table>
+							<table id="pzoneTblReg">
+								<c:forEach var="bws" items="${bws }">
+									<tr class="dataTr" style="border-bottom-style: gray 1px inset;">
+
+										<td class="pzoneTblRegTd">
+											<a href="pzone.info.go?m_board_no=${bws.m_board_no }">${bws.m_board_no }</a>
+										</td>
+										<td class="pzoneTblRegTd">
+											<a href="pzone.info.go?m_board_no=${bws.m_board_no }">${bws.m_board_title }</a>
+										</td>
+										
+										<td class="pzoneTblRegTd" >
+											<fmt:formatDate value="${bws.m_board_when }"
+												pattern="yyyy-MM-dd" />
+										</td>
+
+									</tr>
+								</c:forEach>
+							</table>
 						</td>
 					</tr>
-				</table>
-				<table class="phomeReg">
 					<tr>
-						<td><img src="resources/img/11.png"> 2222222 ! (2)
-						</td>
-					</tr>
-				</table>
-				<table class="phomeReg">
-					<tr>
-						<td><img src="resources/img/11.png"> 33333333333 ! (3)
+						<td>
+							<table>
+								<tr>
+									<td align="left">
+										<button id="pzoneRegButton" onclick="goBoard();">글쓰기</button>
+									</td>
+								</tr>
+							</table>
+
 						</td>
 					</tr>
 				</table>
