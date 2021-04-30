@@ -4,13 +4,13 @@ function goJoin(){
 function goBoard(){
 	location.href = "pzone.board.go";
 }
-function goPBDelete(){
-	location.href = "pzone.delete.go";
-}
 
 function goBoardInfoGo(){
 	location.href="pzone.info.go";
 }
 function goBoardModifyGo(){
 	location.href="pzone.modify.go";
+}
+function goPBDelete(){
+	location.href = "pzone.delete.go";
 }

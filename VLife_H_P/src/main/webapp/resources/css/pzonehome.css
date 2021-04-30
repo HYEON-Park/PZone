@@ -41,8 +41,6 @@
 
 /*-----------------------------------------------*/
 
-
-
 #pzoneTbl{
 	width: 1000px;
 	padding-top: 3px;
@@ -131,6 +129,84 @@
 	padding-top: 7px;
 	padding-bottom: 7px;
 	padding-right:10x;
+	border: none;
+	font-size: 20px;
+	color: white;
+}
+#pPBInfoTblTitle{
+	font-size: 25pt; 
+	width: 800px; 
+	height: 50px;
+	font-family: sb;
+}
+
+#pPBInfoTblText{
+	font-family: el;
+	font-size: 16pt; 
+	width: 800px; 
+	height: 350px;
+}
+
+#pPBinfoUDButton {
+	position:fixed;
+	width:80px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #5586EB;
+	border-radius: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right:10x;
+	border: none;
+	font-size: 20px;
+	color: white;
+}
+/*info2----------------------------------------------*/
+
+#pPBInfo2 {
+	padding-top:30px;
+	width: 800px; 
+	height: 700px;
+}
+#pPBInfo2Tbl{
+	
+	
+}
+
+#pPBInfoTblTitle2{
+	padding-top:5px;
+	font-size: 25pt; 
+	width: 800px; 
+	height: 50px;
+	font-family: sb;
+}
+
+#pPBInfoTblText2{
+	font-family: el;
+	font-size: 16pt; 
+	width: 800px; 
+	height: 350px;
+}
+
+#pPBinfoButtonTbl{
+	width: 850px;
+	/* background-color: black; */
+}
+
+#pPBinfoUpdateButton {
+	width:80px;
+	height:50px;
+	background-color: #5586EB;
+	border-radius: 5px;
+	border: none;
+	font-size: 20px;
+	color: white;
+}
+#pPBinfoDeleteButton {
+	width:80px;
+	height:50px;
+	background-color: #5586EB;
+	border-radius: 5px;
 	border: none;
 	font-size: 20px;
 	color: white;

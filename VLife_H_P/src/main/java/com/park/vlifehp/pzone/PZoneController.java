@@ -1,12 +1,10 @@
 package com.park.vlifehp.pzone;
 
-import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -55,7 +53,7 @@ public class PZoneController {
 		return "index";
 
 	}
-
+	//게시판작성 C
 	@RequestMapping(value = "/pzone.write.go", method = RequestMethod.POST)
 	public String pzoneBoardWrite(BoardWrite bw, VMember m, HttpServletRequest req) {
 		mDAO.memberLogin(req, m);
@@ -73,11 +71,11 @@ public class PZoneController {
 
 	}
 
+	// 글 조회 페이지 R
 	@RequestMapping(value = "/pzone.info.go", method = RequestMethod.GET)
 	public String pzoneBoardinfo(BoardWrite bw, VMember m, HttpServletRequest req) {
 		mDAO.memberLogin(req, m);
 		bDAO.boardInfo(req, bw);
-		System.out.println(bw);
 		if (mDAO.loginCheck(req)) {
 			req.setAttribute("contentPage", "category/pzonePBInfo.jsp");
 			// 로그인체크에 걸려서(해당아이디가 있으면)다음반응 주삼
@@ -92,11 +90,11 @@ public class PZoneController {
 
 	}
 
+	// 수정삭제페이지
 	@RequestMapping(value = "/pzone.modify.go", method = RequestMethod.GET)
 	public String pzoneBoardinfo2(BoardWrite bw, VMember m, HttpServletRequest req) {
 		mDAO.memberLogin(req, m);
 		bDAO.boardInfo(req, bw);
-		System.out.println(bw);
 		if (mDAO.loginCheck(req)) {
 			req.setAttribute("contentPage", "category/pzonePBInfo2.jsp");
 			// 로그인체크에 걸려서(해당아이디가 있으면)다음반응 주삼
@@ -110,12 +108,14 @@ public class PZoneController {
 		return "index";
 
 	}
-
-	@RequestMapping(value = "/board.update.go", method = RequestMethod.GET)
+	
+	//U
+	@RequestMapping(value = "/pzone.update.go", method = RequestMethod.POST)
 	public String pzoneBoardUpdate(BoardWrite bw, VMember m, HttpServletRequest req) {
 		mDAO.memberLogin(req, m);
-		bDAO.boardWrite(req, bw);
+		bDAO.boardUpdate(req, bw);
 		if (mDAO.loginCheck(req)) {
+			bDAO.boardGet(req);
 			req.setAttribute("contentPage", "category/pzonehome.jsp");
 			// 로그인체크에 걸려서(해당아이디가 있으면)다음반응 주삼
 		} else {
@@ -127,18 +127,25 @@ public class PZoneController {
 		return "index";
 
 	}
-	/*
-	 * @RequestMapping(value = "/board.delete.go", method = RequestMethod.GET)
-	 * public String pzoneBoardDelete(BoardWrite bw, VMember m,HttpServletRequest
-	 * req) { mDAO.memberLogin(req, m); bDAO.boardDelete(req); bDAO.boardWrite(req,
-	 * bw); if (mDAO.loginCheck(req)) { req.setAttribute("contentPage",
-	 * "category/pzonehome.jsp"); //로그인체크에 걸려서(해당아이디가 있으면)다음반응 주삼 } else {
-	 * req.setAttribute("loginPage", "member/login.jsp");
-	 * req.setAttribute("contentPage", "home.jsp"); //로그인 안됐을 때 }
-	 * 
-	 * return "index";
-	 * 
-	 * }
-	 */
+	
+	//D
+	@RequestMapping(value = "/pzone.delete.go", method = RequestMethod.GET)
+	public String pzoneBoardDelete(BoardWrite bw, VMember m, HttpServletRequest req) {
+		mDAO.memberLogin(req, m);
+		bDAO.boardDelete(req, bw);
+		if (mDAO.loginCheck(req)) {
+			bDAO.boardGet(req);
+			req.setAttribute("contentPage", "category/pzonehome.jsp");
+			// 로그인체크에 걸려서(해당아이디가 있으면)다음반응 주삼
+		} else {
+			req.setAttribute("loginPage", "member/login.jsp");
+			req.setAttribute("contentPage", "home.jsp");
+			// 로그인 안됐을 때
+		}
+		
+		return "index";
+		
+	}
+	
 
 }

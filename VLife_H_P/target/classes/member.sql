@@ -49,6 +49,13 @@ create table vzone_board(
 create sequence vzone_board_seq;
 select*from vzone_board; 
 drop table vzone_board cascade constraint purge;
+update vzone_board set m_board_title = #{m_board_title}, m_board_text = #{m_board_text} where m_board_no=45
+
+update * from vzone_member, vzone_board where m_id = m_board_writer 
+and (set m_board_title = '이름', m_board_text = '내용' where m_board_no = 45)
+		
+
+
 insert into vzone_board values(vzone_board_seq.nextval, sysdate, m_board_writer, m_board_title, m_board_text)
 select m_board_title,m_board_when,m_board_text,m_board_no from vzone_board where m_board_no = 1
 delete from vzone_board where m_board_no=10;
