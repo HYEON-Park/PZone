@@ -9,7 +9,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>게시글 수정/삭제</h1>
 	<table id="pPBInfo2">
 		<form action="pzone.update.go" name="boardInfoUpdate" method="POST">
 			<tr>
@@ -21,7 +20,8 @@
 									<c:forEach var="bb" items="${b2 }">
 										<tr>
 											<%-- <td>${b2.m_board_no}</td> --%>
-											<td style="font-weight: bolder;"><input
+											<td style="font-weight: bolder;">
+											<input
 												style="width: 850px; height: 50px; font-size: 18pt;"
 												name="m_board_title" value="${bb.m_board_title }"></td>
 										</tr>
@@ -43,12 +43,10 @@
 						</tr>
 						<tr>
 							<td>
-								<button id="pPBinfoUpdateButton">수정</button>
-									</c:forEach>
-								</form>
-							</td>
-
-							<td><c:forEach var="bb" items="${b2 }">
+								<button id="pPBinfoUpdateButton">수정</button> 
+								<%-- </c:forEach> --%>
+								</form> 
+								<%-- <c:forEach var="bb" items="${b2 }"> --%>
 									<button value="${bb.m_board_no}" id="pPBinfoDeleteButton"
 										onclick="goPBDelete();">삭제</button>
 								</c:forEach>

@@ -82,26 +82,27 @@ public class BoardDAO {
 
 	}
 
-	public void boardDelete(HttpServletRequest req) {
+	public void boardDelete(HttpServletRequest req, BoardWrite bw) {
 
 		try {
 
-			/*int no = Integer.parseInt(req.getParameter("m_board_no"));
-			System.out.println(no);
-			BoardWrite nbw = new BoardWrite(new BigDecimal(no), null, null, null, null);*/
+//			BoardWrite bw = (BoardWrite) req.getSession().getAttribute("writeNO");
+//			int no = Integer.parseInt(req.getParameter("bw.getM_board_no"));
+//			System.out.println(bw);
 //			System.out.println(no);
-			BoardWrite bw = (BoardWrite) req.getSession().getAttribute("writeNO");
-			int no = Integer.parseInt(req.getParameter("bw.getM_board_no"));
-			System.out.println(bw);
-			System.out.println(no);
-			BoardWrite nbw = new BoardWrite(new BigDecimal(no), null, null, null, null);
+//			BoardWrite nbw = new BoardWrite(new BigDecimal(no), null, null, null, null);
+//			
+//			
+//			if (ss.getMapper(PBoardMapper.class).boardDelete(nbw) == 1) {
+//				req.setAttribute("bw", nbw);
+//			}
 			
-			
-//			bw.setM_board_no(bw.getM_board_no());
-//			System.out.println(nbw.getM_board_no());
-			
-			if (ss.getMapper(PBoardMapper.class).boardDelete(nbw) == 1) {
-				req.setAttribute("bw", nbw);
+			List<BoardWrite> b2 = ss.getMapper(PBoardMapper.class).boardDelete();
+			if (b2.size() != 0) {
+				BoardWrite mbw = b2.get(0);
+				if (mbw.getM_board_no().equals(bw.getM_board_no())) {
+					req.setAttribute("b2", b2);
+					}
 			}
 
 		} catch (Exception e) {

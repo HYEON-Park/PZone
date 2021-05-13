@@ -7,6 +7,6 @@ public interface PBoardMapper {
 	public abstract List<BoardWrite> boardGet();
 	public abstract List<BoardWrite> boardInfo(BoardWrite bw);
 	public abstract int boardUpdate(BoardWrite bw);
-	public abstract int boardDelete(BoardWrite bw);
+	public abstract List<BoardWrite> boardDelete();
 	
 }

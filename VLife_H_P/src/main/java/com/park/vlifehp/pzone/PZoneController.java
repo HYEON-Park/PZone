@@ -132,7 +132,7 @@ public class PZoneController {
 	@RequestMapping(value = "/pzone.delete.go", method = RequestMethod.GET)
 	public String pzoneBoardDelete(BoardWrite bw, VMember m, HttpServletRequest req) {
 		mDAO.memberLogin(req, m);
-		bDAO.boardDelete(req);
+		bDAO.boardDelete(req, bw);
 		if (mDAO.loginCheck(req)) {
 			bDAO.boardGet(req);
 			req.setAttribute("contentPage", "category/pzonehome.jsp");
