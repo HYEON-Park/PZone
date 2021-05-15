@@ -81,7 +81,7 @@ public class BoardDAO {
 		}
 
 	}
-
+/*
 	public void boardDelete(HttpServletRequest req, BoardWrite bw) {
 
 		try {
@@ -148,6 +148,6 @@ public class BoardDAO {
 
 		}
 
-	}
+	}*/
 
 }
